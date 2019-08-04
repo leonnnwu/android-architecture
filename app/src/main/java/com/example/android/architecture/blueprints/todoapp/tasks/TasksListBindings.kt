@@ -26,7 +26,7 @@ import com.example.android.architecture.blueprints.todoapp.data.Task
  */
 @BindingAdapter("app:items")
 fun setItems(listView: RecyclerView, items: List<Task>) {
-    (listView.adapter as TasksAdapter).submitList(items)
+    (listView.adapter as TasksAdapter).notifyDataSetChanged()
 }
 
 @BindingAdapter("app:completedTask")
